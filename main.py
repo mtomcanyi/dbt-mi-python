@@ -11,7 +11,8 @@ cli_args = [
 ]
 
 # Switch to target project directory
-work_dir = f"{os.getcwd()}/mi_postgres"
+repository_path = "/data/repository"
+work_dir = f"{repository_path}/mi_postgres"
 os.chdir(work_dir)
 
 
