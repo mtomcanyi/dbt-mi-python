@@ -1,11 +1,18 @@
+import os
 from dbt.cli.main import dbtRunner, dbtRunnerResult
 
 dbt = dbtRunner()
+
+
+# Command to run
 cli_args = [
-       "run", 
-       "--profiles-dir", "."]
+       "run",                       # Run model 
+       "--profiles-dir", ".."       # profiles.yml is located in main directory
+]
 
-
+# Switch to target project directory
+work_dir = f"{os.getcwd()}/mi_postgres"
+os.chdir(work_dir)
 
 
 res: dbtRunnerResult = dbt.invoke(cli_args)
