@@ -5,7 +5,7 @@ mi_postgres:
       type: postgres
       threads: 1
       host: "{{ env_var('DBT_DEV_HOST') }}"
-      port: "{{ env_var('DBT_DEV_PORT') }}"
+      port: "{{ env_var('DBT_DEV_PORT') | int }}"
       user: "{{ env_var('DBT_DEV_USER') }}"
       pass: "{{ env_var('DBT_DEV_PASS') }}"
       dbname: "{{ env_var('DBT_DEV_DBNAME') }}"
