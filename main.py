@@ -1,7 +1,12 @@
 from dbt.cli.main import dbtRunner, dbtRunnerResult
 
 dbt = dbtRunner()
-cli_args = ["--version"]
+cli_args = [
+       "run", 
+       "--profiles-dir", "."]
+
+
+
 
 res: dbtRunnerResult = dbt.invoke(cli_args)
 

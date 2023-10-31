@@ -1,0 +1,24 @@
+mi_postgres:
+  outputs:
+
+    dev:
+      type: postgres
+      threads: 1
+      host: dev-host.meiro.io
+      port: 5432
+      user: dev_user
+      pass: dev_password
+      dbname: dev_dbname
+      schema: dev_schema
+
+    prod:
+      type: postgres
+      threads: 1 
+      host: prod-host.meiro.io
+      port: 5432
+      user: prod_user
+      pass: prod_password
+      dbname: prod_dbname
+      schema: prod_schema
+
+  target: dev
